@@ -313,7 +313,7 @@
     在执行insert + values操作的时候  虽然最终执行成功，结果正确。但是在执行日志中会出现如下的错误信息。
     ```
 
-    ![image-20201109144915808](Hive3安装.assets/image-20201109144915808.png)
+    ![image-20201109144915808](https://chart-beded.oss-cn-shenzhen.aliyuncs.com/img/image-20201109144915808.png)
 
   - 开启hiveserver2执行日志。查看详细信息
 
@@ -323,7 +323,7 @@
     ERROR [5ce14c58-6b36-476a-bab8-89cba7dd1706 main] exec.StatsTask: Failed to run stats task
     ```
 
-    ![image-20201109145136486](Hive3安装.assets/image-20201109145136486.png)
+  ![image-20201109145136486](https://chart-beded.oss-cn-shenzhen.aliyuncs.com/img/image-20201109145136486.png)
 
   - 但是 ==此错误并不影响最终的插入语句执行成功==。
 
@@ -331,7 +331,7 @@
 
     - statstask是一个hive中用于统计插入等操作的状态任务  其返回结果如下
 
-      ![image-20201109145304560](Hive3安装.assets/image-20201109145304560.png)
+    ![image-20201109145304560](https://chart-beded.oss-cn-shenzhen.aliyuncs.com/img/image-20201109145304560.png)
 
     - 此信息类似于计数器 用于告知用户插入数据的相关信息 但是不影响程序的正常执行。
 
@@ -339,7 +339,7 @@
 
       https://community.cloudera.com/t5/Support-Questions/Hive-Metastore-Connection-Failure-then-Retry/td-p/151661
 
-      ![image-20201109145621381](Hive3安装.assets/image-20201109145621381.png)
+   ![image-20201109145621381](https://chart-beded.oss-cn-shenzhen.aliyuncs.com/img/image-20201109145621381.png)
 
     - ==在mysql metastore中删除 PART_COL_STATS这张表即可==。
 
